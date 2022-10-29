@@ -3,6 +3,20 @@
 The recommendation system is based on users' ratings, the sentimental analyzer for user's reviews to impute the ratings.
 
 
+## Intuition
+User reviews could reflect how user will rate the game more accuratly. And there are many reviews without ratings. <br>
+If we could use the review to predict the users' ratings, it will improve the Collaborative Filtering recommendation system. 
+
+Upon some EDA, the reviews could form topic clusters, which means it's very possible that using review to predict could make a difference.
+
+## Models used
+- Sentimental Analyzer
+
+  Random forest, tensorflow, XGBregressor
+
+- Recommendeation System
+
+  Surprise SVD, KNN
 
 ## datasets
 
@@ -19,14 +33,34 @@ should be saved in a folder named raw_data
 
 ## file structures
 
-there are 4 categories of the Notebooks.
+there are 4 categories of the Notebooks, states 4 stages of this projects.
 
-1.* data wrangling of the above datasets
+1.* data wrangling files of the above datasets
 
-2.* EDA metacritic and steam datasets
+2.* EDA metacritic and steam datasets, plus process and clean text in this stage
 
-3.* Modelling for Sentimental Analyzer
+3.* Modelling for Sentimental Analyzer: tested with three models, each work on different environment
 
-4.* 
+4.* Recommendation System: baseline, imputed with tensorflow and XBGoost (at different environment)
 
+## Results
+
+The models are trained using GPU when possible.
+
+
+## Environment
+
+ - tensorflow: need to build tf environment
+ 
+    [Installation Guide](https://www.tensorflow.org/install)
+ 
+ - XGBoost: requires certain version of Python. i.e. Python 3.6
+ 
+    [Installation Guide](https://xgboost.readthedocs.io/en/stable/install.html)
+ 
+## Special Thanks
+The awsome intructor **Praveen Gowtham**
+
+ 
+ 
 
